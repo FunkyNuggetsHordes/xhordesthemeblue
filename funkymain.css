@@ -1,0 +1,1526 @@
+body,
+html {
+    margin: 0;
+    overflow: hidden;
+}
+@media (min-width: 900px) {
+    .container {
+        width: 900px !important;
+    }
+}
+#page {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding-bottom: 10px;
+}
+#renderer {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/*#previewRenderer {
+    height:200px;
+    margin-top: -20px;
+}*/
+
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+.bloglink {
+    margin-bottom: 10px;
+}
+.centerHelper {
+    position: absolute;
+    left: 50%;
+    width: 75%;
+    max-width: 1200px;
+}
+.panel {
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+}
+.modal-dialog {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.modal-backdrop {
+    opacity: 0.2 !important;
+}
+/* SKILLS */
+
+#skillbar {
+    position: absolute;
+    height: 50px;
+    width: 220px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+}
+.skill {
+    margin: 2.5px;
+    position: relative;
+    display: inline;
+}
+.skillIcon {
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+}
+.skillHotkey {
+    position: absolute;
+    top: -14px;
+    right: 0px;
+    color: #AAA;
+}
+.skillCooldown {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: rgb(0, 166, 255);
+    font-weight: bold;
+    font-size: 20px;
+    text-align: right;
+}
+.skillOverlay {
+    position: absolute;
+    top: -14px;
+    left: 0px;
+    height: 50px;
+    width: 50px;
+    margin: 0;
+    padding: 5px;
+    background: rgba(40, 60, 100, 0.5)
+}
+.skillOverlayDisable {
+    background: rgba(80, 80, 80, 0.8);
+}
+.skillLvlUpButton {
+    position: absolute;
+    right: 10px;
+    top: -47px;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    background-color: #c7f1a6;
+    color: #4b8253;
+    border: 1px solid #74a24c;
+    outline: none !important;
+}
+.skillLvlUpButton:hover,
+.skillLvlUpButton:focus {
+    color: #4A7A47;
+}
+.skillButtonDisabled,
+.skillButtonDisabled:hover,
+.skillButtonDisabled:focus {
+    background-color: #6d6d6d;
+    color: #616161;
+    border: 1px solid #585858;
+    cursor: default;
+}
+/*    */
+
+.progress {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    height: 13px;
+    margin: 0px;
+}
+/* Progress bars */
+
+.progress-bar {
+    -webkit-transition: none !important;
+    transition: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+/* Info / Help field*/
+
+#infoText {
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+/* EXP Bar */
+
+#expBarContainer {
+    margin-left: -100px;
+    width: 400px;
+    position: absolute;
+    left: 43%;
+    bottom: 5px;
+}
+#expbar {
+    width: 0%;
+    padding: 0px;
+    font-size: 10px;
+    line-height: 20px;
+}
+.progressbartext {
+    font-size: 12px;
+    line-height: 30px;
+    font-weight: 800;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 300;
+    color:white !important;
+}
+/* Castbar */
+
+#castBarContainer {
+    position: absolute;
+    width: 200px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 20%;
+}
+/* Statistics window */
+
+#statistics {
+    display: none;
+    background: rgba(255, 255, 255, 0.5);
+    width: 220px;
+    height: 85px;
+    float: left;
+}
+#statistics-body {
+    padding: 5px;
+    position: relative;
+    width: 100%;
+}
+#statistics-body div {
+    width: 110px;
+}
+.factionAStatistics {
+    position: absolute;
+    left: 10px;
+}
+.factionBStatistics {
+    text-align: right;
+    position: absolute;
+    right: 10px;
+}
+/* Ladder */
+
+#ladder {
+    clear: left;
+    float: right;
+}
+#ladder-body {
+    padding: 5px 10px 5px 10px;
+}
+#ladder p {
+    margin: 0;
+    padding: 0;
+}
+/* ICONS */
+/* chat window */
+
+#chatbox {
+    display: flex;
+    flex-direction: column-reverse;
+}
+#chatboxWrapper {
+    background-image: url('https://st.depositphotos.com/1176848/3380/i/170/depositphotos_33803993-stock-photo-seamless-carbon-fiber-pattern.jpg');
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    order: 1;
+    flex-grow: 1;
+    opacity: 0.9;
+}
+#chatSettingWrapper {
+    order: 2;
+}
+ 
+#chatboxWrapper::-webkit-scrollbar-track,
+#inventory-items::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+
+}
+
+.chatsettingbutton,
+.chatsettingbutton:hover {
+    border-style: none;
+    padding: 1px 5px;
+    color: #777 !important;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.5;
+}
+.chatsettingdisable,
+.chatsettingdisable:hover {} .chatsettingdisable:active,
+.chatsettingbutton:active {
+    box-shadow: none;
+    webkit-box-shadow: none;
+}
+#chatboxBody {
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    cursor: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#chatInput {
+    order: 2;
+}
+/* CHAT MESSAGES */
+
+.chatmsg {
+    font-weight: 300;
+    margin: 0 0 0 0;
+}
+/* SCROLLBAR */
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.22);
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+/* UI Anchors */
+
+#upperLeftContainer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 5px;
+}
+#lowerRightContainer {
+    position: absolute;
+    bottom: 20px;
+    right: 0px;
+    margin: 5px;
+}
+#upperRightContainer {
+    min-width: 594px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 5px;
+}
+#lowerLeftContainer {
+    width: 30%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    margin: 5px;
+    z-index: 2;
+}
+/* Target poanel */
+
+.targetPanel {
+    margin: 0 5px 5px 0;
+    padding: 5px 5px 5px;
+    width: 250px;
+    float: left;
+}
+.targetPanel + .targetPanel {
+    width: auto;
+}
+.targetinfo {
+    display: flex;
+    flex-direction: row;
+}
+.hpbarbg {
+    height: 35px;
+    position: relative;
+    background-color: #596D5F;
+}
+.hpbar {
+    width: 75%;
+    background-color: #57C347;
+}
+.mpbarbg {
+    height: 16px;
+    position: relative;
+    background-color: #394545;
+}
+.mpbar {
+    width: 75%;
+    background-color: #0d84c5;
+}
+.manafont {
+    font-size: 10px;
+}
+.targettext {
+    margin: 0 5px 0 0;
+    font-weight: 800;
+    white-space: nowrap;
+}
+.targetname {
+    order: 1;
+    flex-grow: 1;
+    min-width: 150px;
+    overflow: hidden;
+}
+.targetlevel {
+    color: #fff;
+    text-align: right;
+    order: 2;
+}
+.targethealthtext {
+    color: #FFFFFF;
+    text-align: right;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    font-weight: 300;
+    transform: translateY(-50%);
+}
+.targetMode {
+    font-weight: 300;
+    color: #FFF;
+    font-size: 75%;
+    padding-left: 3px;
+}
+#sys-discord {
+    display: none;
+}
+/*System bar*/
+
+#resources {
+    padding: 5px;
+    margin: 0 10px 10px 0;
+    clear: both;
+    float: left;
+}
+.resourcesText {
+    font-weight: 700;
+    margin: 5px;
+    font-weight: 700;
+    background-color: transparent;
+    border-radius: 4px;
+    float: right;
+    padding: 0 5px 0 5px;
+}
+.goldCoin {
+    margin: 0 4px 0 0;
+    height: 1.2em;
+    vertical-align: -20%;
+}
+/* Info Panel*/
+
+#infoPanel {
+    padding: 5px 5px 5px 8px;
+    min-width: 220px;
+    max-width: 350px;
+}
+.skillName {
+    font-weight: 700;
+    color: rgb(0, 166, 255);
+    margin: 0 0 5px 0;
+}
+.skillDescription,
+.skillLvlInfo {
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 12px;
+    padding: 10px;
+    margin: 0 0 5px 0;
+}
+.skillDescription {
+    color: #fff;
+}
+/* general colors */
+
+.ally {
+    color: rgb(0, 166, 255);
+}
+.enemy {
+    color: #931212;
+}
+.chatmsg-system {
+    color: #ffcc00;
+}
+.chatmsg-loot {
+    color: #ffcc00;
+}
+.chatmsg-exp {
+    color: #cc9966;
+}
+.chatmsg-player {
+    color: #977e65;
+    padding: 3px;
+}
+.chatmsg-death {
+    color: #cc6666;
+}
+.chatmsg-global {
+    width: 100%;
+    color: #ddd;
+    padding: 3px;
+    background:none !important;
+}
+.chatmsg-clan {
+    color: #0099ff;
+    padding: 3px;
+}
+.chatmsg-w {
+    color: #ffcc00;
+    padding: 3px;
+}
+.chatmsg-mention {
+    color: gold;
+    background-color: rgba(255, 0, 255);
+    border-radius: 3px;
+    padding: 3px;
+}
+.chatmsg-pk {
+    color: #cc6666;
+}
+.factionA {
+    color: #6699cc;
+}
+.factionB,
+#deathScreen p {
+    color: #cc6666;
+}
+#deathScreen p {
+    font-size: 18px;
+}
+#deathScreen p + p {
+    color: #fff;
+    font-size: 12px;
+}
+.unreg {
+    color: #666;
+}
+/*login menu*/
+
+.cSelName {
+    margin: 0;
+    padding-left: 3px;
+}
+.factionSelect {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+.factionSelect.active,
+.factionSelect.active:hover,
+.factionSelect.active:active {
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+.factionSelect img {
+    display: block;
+    margin: 10px auto 10px auto;
+}
+.factionSelect:hover {
+    background-color: #f5f5f5;
+}
+.factionSelA {
+    border-right: none;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.factionSelB {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+/*SocialMedia*/
+
+.socialIcon img {
+    width: 25px;
+    margin-right: 15px;
+}
+.instructions p {
+    margin-bottom: 4px;
+}
+.fb-like {
+    display: inline-block;
+    vertical-align: top;
+}
+.twitter-share-button {
+    display: inline-block;
+    vertical-align: top;
+}
+/* Systembar */
+
+#systembar {
+    position: relative;
+}
+/* #serverselectionlist */
+
+.dropdown-menu {} .systembarbutton {
+    margin: 0px;
+    padding: 5px;
+}
+.chatchannelbutton {
+    margin: 0 5px 0 0;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.systembarbutton span {
+    font-size: 12px;
+}
+.modal-body-base {
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    cursor: auto;
+}
+.modal-user {
+    width: 300px;
+    height: 500px;
+}
+.patchnotelist {
+    padding-left: 20px;
+    font-size: 14px;
+}
+#classSelection,
+#factionSelectionPanel {
+    clear: left;
+}
+.classChoice img {
+    margin-right: 15px;
+}
+.classicon {
+    margin: 0 0.2em 0 0;
+    height: 1.2em;
+    bottom: -1px;
+    float: right;
+    position: relative;
+}
+.factionicon {
+    margin: 0 4px 0 0;
+    height: 1.0em;
+    vertical-align: -10%;
+}
+/* Settings */
+
+.modal-settings {
+    width: 80%;
+    max-width: 400px;
+    height: 500px;
+}
+.td-setting {
+    width: 40%
+}
+#deathScreen {
+    width: 300px;
+    position: fixed;
+    height: 226px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+#sharebuttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.share-facebook {
+    width: 50%;
+    display: inline;
+}
+.share-twitter {
+    margin-left: 10px;
+    width: 50%;
+    display: inline;
+}
+.editorMain {
+    position: absolute;
+    left: 50%;
+    width: 400px;
+    bottom: 10px;
+}
+.editorpanel {
+    padding: 8px;
+}
+#inventory {
+    left: 360px;
+    top: 450px;
+    position: absolute;
+    border-radius: 5px;
+    background-image: url('https://st.depositphotos.com/1176848/3380/i/170/depositphotos_33803993-stock-photo-seamless-carbon-fiber-pattern.jpg') !important;
+    width: 320px !important;
+    opacity: 0.9;
+    z-index: 5;
+}
+.modal-content,
+.modal-body {
+    background-image: url('https://st.depositphotos.com/1176848/3380/i/170/depositphotos_33803993-stock-photo-seamless-carbon-fiber-pattern.jpg') !important;
+    box-shadow: inset 0px 0px 16px 5px rgba(0, 166, 255, 0.20);
+    opacity: 0.9;
+}
+#inventory-items {
+    display: flex;
+    margin: 20px 3px 10px 3px;
+    flex-wrap: wrap;
+    overflow-y: scroll !important;
+    overflow-x: hidden;
+    height: 125px !important;
+    width:310px !important;
+}
+.item {
+    width: 40px;
+    height: 40px;
+
+    padding: 1px;
+    margin: 1px;
+    position: relative;
+    overflow: hidden;
+    /* border: 3px solid #000; */
+}
+.mouseItem {
+background-image: url('https://st.depositphotos.com/1176848/3380/i/170/depositphotos_33803993-stock-photo-seamless-carbon-fiber-pattern.jpg') !important;
+    opacity: 0.9;
+    padding: 100px;
+    margin: 10px;
+    position: absolute;
+    z-index: 9;
+    
+}
+.item:hover {
+    box-shadow: inset 0 0 10px #c5f8ff;
+    cursor: crosshair;
+}
+
+
+#button,
+.close,
+.uiclosebutton,
+.button.close.uiclosebutton{
+    z-index: 9 !important;
+    color:#ffffff !important;
+
+}
+
+
+
+
+
+
+
+
+.itemPic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+.itemPicRotated {
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    max-width: 120%;
+    max-height: 120%;
+}
+.itemEmpty:hover {
+    box-shadow: inset 0 0 10px #fff;
+}
+.itemEmpty {
+    width: 40px;
+    height: 40px;
+    /* background-color: rgba(195, 195, 195, 0.39); */
+    
+    border-radius: 7px;
+    margin: 1px;
+    position: relative;
+    /* border: 3px solid rgba(173, 170, 170, 0.5); */
+    
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+.itemViewer {
+
+}
+.itemName {
+    font-size: 16px;
+    font-weight: 800;
+    margin: 0;
+}
+.itemStat {
+    font-size: 14px;
+}
+.itemDescription {
+    font-size: 12px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+#characterpanel {
+    left: 5px;
+    top: 80px;
+    position: absolute;
+
+    padding: 1px !important;
+    background-image: url('https://st.depositphotos.com/1176848/3380/i/170/depositphotos_33803993-stock-photo-seamless-carbon-fiber-pattern.jpg') !important;
+    opacity: 0.9;
+}
+#characterpanel h5 {
+    margin-top: 5px;
+    font-weight: 800;
+}
+#character-stats {
+    float: left;
+    background:none !important;
+}
+#character-items {
+    margin: 0px 38px;
+    position: relative;
+    width: 220px;
+    height: 170px;
+    float: left;
+}
+.charstat {
+    text-align: end;
+}
+#character-icon {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/* SLOTS */
+
+.equipslot {
+    position: absolute;
+}
+.statReqMiss {
+    color: #f00;
+}
+.statReq {
+    color: #0f0;
+}
+.skillReqMiss {
+    color: #b00;
+}
+.skillReq {
+    color: #0b0;
+}
+.clearslot {
+    background-image: none;
+}
+.clantable {
+    line-height: 1.6em;
+    table-layout: auto;
+    white-space: nowrap;
+}
+.charPanelIcon {}
+/* Help screen */
+
+.modal-help {
+    width: 450px;
+    height: 510px;
+}
+.td-help {
+    width: 60%;
+}
+.controltable>tbody>tr>td {
+    line-height: 0.8;
+}
+.detailText {
+    color: #FFFFFF;
+}
+#c-name {
+    width: 690px;
+    text-align: center;
+}
+/* icon */
+
+.sys-icon {
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    filter: sepia;
+}
+.icon-bag {
+    background-image: url("http://hordes.io/data/icons/bag.png");
+}
+.icon-char {
+    background-image: url("http://hordes.io/data/icons/char.png");
+    background-position-y: 0px
+}
+.icon-id {
+    background-image: url("http://hordes.io/data/icons/id.png");
+}
+.icon-settings {
+    background-image: url("http://hordes.io/data/icons/settings.png");
+}
+.icon-help {
+    background-image: url("http://hordes.io/data/icons/help.png");
+}
+.icon-clan {
+    background-image: url("http://hordes.io/data/icons/horde.png");
+}
+.iconpanelmod {
+    float: left;
+    margin: -3px 4px 0 0;
+}
+#trader {
+    width: 350px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1.0);
+    border-radius: 5px;
+}
+/** CLAN **/
+
+.sm-hr {
+    margin: 10px 0 10px 0;
+}
+.modal-clan {
+    width: 700px;
+    height: 440px;
+}
+.clanstat {
+    border: none;
+}
+.td-clanstat {
+    text-align: end;
+}
+.clanmemberlist {
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    width: 450px;
+}
+/*
+
+.clanmemberlist::-webkit-scrollbar-track {
+    background-color: #ddd;
+}
+
+.clanmemberlist::-webkit-scrollbar-thumb {
+    background-color: #555;
+}*/
+
+.clanstat>tbody>tr>td {
+    line-height: 1em;
+    border: none;
+}
+#setNickModalButton {
+    position: absolute;
+    left: 20px;
+    top: 220px;
+}
+#visitProfile {
+    position: absolute;
+    right: 20px;
+    top: 220px;
+}
+#userinteract {
+    width: 350px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1.0);
+    border-radius: 5px;
+    padding: 5px;
+}
+#userinteract b {
+    color: #fff;
+}
+.btmlink {
+    margin: 0 10px;
+}
+* {
+    border-radius: 0 !important;
+}
+#characterpanel,
+.targetPanel,
+#inventory,
+#chatbox,
+#ladder-body,
+.modal-body {
+    padding: 0;
+}
+#chatSettingWrapper {
+    margin: 0;
+}
+.slot_glove {
+    left: 0%;
+}
+.slot_glove.itemEmpty {
+    background-image: url("http://hordes.io/data/slots/glove.png");
+}
+.slot_armlet {
+    left: 0%;
+    top: 42px;
+}
+.slot_armlet.itemEmpty {
+    background-image: url("http://hordes.io/data/slots/armlet.png");
+}
+.slot_boot {
+    left: 0%;
+    top: 84px;
+}
+.slot_boot.itemEmpty {
+    background-image: url("http://hordes.io/data/slots/boot.png");
+}
+.slot_gem {
+    right: 0%;
+}
+.slot_gem.itemEmpty {
+    background-image: url("http://hordes.io/data/slots/gem.png");
+}
+.slot_ring {
+    right: 0%;
+    top: 42px;
+}
+.slot_ring.itemEmpty {
+    background-image: url("http://hordes.io/data/slots/ring.png");
+}
+.slot_bag {
+    right: 0%;
+    top: 84px;
+}
+.slot_bag.itemEmpty {
+    background-image: url("http://hordes.io/data/slots/bag.png");
+}
+.slot_weapon {
+    right: 50%;
+    top: 130px;
+    transform: translateX(-22px);
+}
+.slot_weapon.itemEmpty {
+    background-image: url("http://hordes.io/data/slots/weapon.png");
+}
+.slot_offhand {
+    right: 50%;
+    transform: translateX(62px);
+    top: 130px;
+}
+.slot_offhand.itemEmpty {
+    background-image: url("http://hordes.io/data/slots/offhand.png");
+}
+.slot_armor {
+    right: 50%;
+    transform: translateX(50%);
+    top: 130px;
+}
+.slot_armor.itemEmpty {
+    background-image: url("http://hordes.io/data/slots/armor.png");
+}
+*[class*="slot_"] {
+    background-repeat: no-repeat !important;
+}
+.menuheader,
+#characterpanel h5,
+#inventory h5,
+.modal-clan h5,
+.targetinfo,
+#chatSettingWrapper,
+#ladder-body #laddertable tr:first-child,
+#setNickModalButton,
+#visitProfile,
+#systembar .btn.btn-default.systembarbutton,
+#trader h5,
+.modal-user h4,
+.modal h4,
+#userinteract h5,
+h5.skillName,
+#upperLeftContainer button,
+#leaveClanButton,
+.btn,
+.targetinfo,
+#ClanWhoIsOnline{
+
+
+    background: linear-gradient(to bottom, #292521 0%, #000000 51%, #1f1c18 65%, rgb(0, 166, 255) 100%);
+
+    color: #ffffff;
+
+}
+#userinteract h5 + h5,
+#clancreation h3,
+#clancreation h5{
+    font-size: 12px;
+    text-transform: unset !important;
+    background: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #FFFFFF;
+}
+#clancreation h3 {
+    font-size: 14px;
+    color: #fff;
+    border-bottom: rgba(255, 255, 255, 0.02) 1px solid;
+}
+#clancreation ul,
+#clancreation li {
+    list-style-type: none;
+}
+#clancreation ul {
+    padding: 0 0 10px 0;
+    font-size: 12px;
+}
+#userinteract {
+    padding: 0;
+}
+#userinteract h5 {
+    margin: 0 0 10px 0;
+}
+#characterpanel,
+#inventory,
+.itemEmpty,
+.item,
+/*
+#chatbox,*/
+
+#infoPanel,
+#trader,
+#userinteract,
+.modal-content,
+#deathScreen {
+    background: #25211d;
+    background: -moz-radial-gradient(center, ellipse cover, #25211d 0%, #110f0d 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #25211d 0%, #110f0d 100%);
+    background: radial-gradient(ellipse at center, #25211d 0%, #110f0d 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#25211d', endColorstr='#110f0d', GradientType=1);
+    -moz-box-shadow: inset 0px 0px 16px 5px rgba(0, 166, 255, 0.20);
+    -moz-box-shadow: inset 0px 0px 16px 5px rgba(0, 166, 255, 0.20);
+    box-shadow: inset 0px 0px 16px 5px rgba(0, 166, 255, 0.20);
+}
+#chatboxWrapper,
+#ladder {
+    box-shadow: inset 0px 0px 16px 5px rgba(0, 166, 255, 0.20);
+}
+#chatbox,
+#ladder {
+    background: rgba(0, 0, 0, 0.75);
+    opacity: 0.9;
+}
+#characterpanel{
+
+}
+#ClanWhoIsOnline{
+    float:right;
+    margin:10px 20px;
+    padding:10px;
+    font-weight:300;
+}
+
+#statistics {
+    display: none !important;
+}
+#statistics + div {
+    width: 270px;
+    padding: 0;
+    float: right;
+}
+#clancreation h3,
+#clancreation h5,
+#characterpanel h5,
+#inventory h5,
+#trader h5,
+.modal-clan h5,
+h5.skillName,
+.modal h4,
+.modal-user h4 {
+    margin: 0;
+    text-transform: uppercase;
+}
+#clancreation h3,
+#clancreation h5,
+#characterpanel h5,
+#inventory h5,
+#trader h5,
+#userinteract h5,
+.modal-clan h5,
+.targetinfo,
+h5.skillName,
+.modal h4,
+.modal-user h4 {
+    padding: 10px;
+}
+#trader h4 {
+    font-size: 12px;
+}
+#clancreation h3,
+#clancreation h5,
+.modal-user h4,
+.modal h4,
+.modal h5,
+.modal h6 {
+    font-size: 14px;
+}
+#clancreation h3,
+#clancreation h5,
+.modal-user h4,
+.modal h4,
+.modal h5,
+.modal h6,
+.modal-user * {
+    font-weight: 300;
+}
+.modal-user h5,
+.modal h5,
+.modal h6,
+.modal-user p {
+    font-size: 13px;
+    padding: 10px 20px;
+}
+#charIdDisplay {
+    font-size: 32px;
+    color: #66cc99;
+}
+.modal-user .btn,
+.modal-user input {
+    width: 180px;
+    border: none;
+    margin: 0 auto;
+}
+#userinteract .btn {
+    border: none;
+}
+#trader img {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.targetname,
+.targetlevel,
+#inventory .resourcesText + .resourcesText,
+#trader h5,
+.btn:hover {
+    color: #FFFFFF !important;
+}
+#inventory .resourcesText + .resourcesText {
+    font-weight: 300;
+    font-size: 13px;
+}
+.targetlevel:before {
+    content: 'lvl. ';
+}
+.targetname.ally:after {
+    content: '(Ally)';
+    color: rgba(0, 166, 255, 0.20);
+    font-size: 10px;
+}
+.targetname.enemy:after {
+    content: '(Enemy)';
+    color: rgb(0, 166, 255);
+    font-size: 10px;
+}
+.close,
+.close:hover {
+    color: rgb(0, 166, 255);
+}
+.close {
+    margin: 6px 9px 0 0;
+    text-shadow: none;
+    opacity: 0.75;
+}
+.close:hover {
+    opacity: 1;
+}
+#characterpanel,
+#inventory,
+#chatbox {
+    width: 305px;
+}
+#character-items {
+    margin: 20px 38px 30px 38px;
+    height: 170px;
+}
+#setNickModalButton,
+#visitProfile,
+#leaveClanButton,
+#disbandClanButton {
+    line-height: 1;
+    height: 32px;
+    margin: 15px 0px;
+    border: none;
+}
+#character-stats {
+    margin: 20px 0px;
+}
+#character-stats:before {
+    line-height: 2;
+    float: left;
+    content: 'stats';
+    padding: 2px 0;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    clear: both;
+    text-indent: 10px;
+    background: #292521;
+    background: -moz-linear-gradient(top, #292521 0%, #262321 50%, #1f1c18 51%, #151310 100%);
+    background: -webkit-linear-gradient(top, #292521 0%, #262321 50%, #1f1c18 51%, #151310 100%);
+    background: linear-gradient(to bottom, #292521 0%, #000000 51%, #1f1c18 65%, rgb(0, 166, 255) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000', endColorstr='#151310', GradientType=0);
+    color: #ffffff;
+}
+#character-stats,
+#character-stats:before {
+    width: 296px;
+}
+#statstable {
+    width: 296px;
+}
+#statstable tr td,
+.clantable tr td {
+    padding: 3px 10px;
+    font-size: 13px;
+    border-bottom: rgba(255, 255, 255, 0.02) 1px solid;
+}
+.clantable tr td + td {
+    color: #fff;
+}
+hr,
+.modal table tr td {
+    border-top: rgba(255, 255, 255, 0.02) 1px solid;
+}
+#statstable tr td {
+    color: rgb(0, 166, 255)
+}
+#statstable tr td + td,
+.clantable tr td {
+    color: #fff;
+}
+.itemEmpty,
+.item {
+    border: #222 1px solid;
+}
+
+*[class*="-icon"],
+#invtrashcan,
+#upperLeftContainer button .icon-char,
+#deathScreen img {
+    filter: grayscale(1) blur(0px) sepia(1) saturate(1) opacity(1) brightness(2) contrast(1) hue-rotate(0deg) invert(0);
+}
+#systembar .btn.btn-default.systembarbutton,
+#upperLeftContainer button,
+.btn-success,
+#deathScreen .btn-primary {
+    border: none;
+    padding: 8px 9px;
+    -webkit-box-shadow: inset 0px 0px 8px 0px rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 0px 0px 8px 0px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0px 0px 8px 0px rgba(255, 255, 255, 0.1);
+}
+#systembar .btn.btn-default.dropdown-toggle.systembarbutton {
+    padding: 8px 15px;
+}
+#upperLeftContainer button {
+    position: absolute;
+    top: 0px;
+    right: -36px !important;
+}
+.hpbar {
+    background: #ff0000;
+    background: -moz-linear-gradient(top, #2c1111 0%, #804d4d 50%, #672828 51%, #2c1111 100%);
+    background: -webkit-linear-gradient(top, #2c1111 0%, #804d4d 50%, #672828 51%, #2c1111 100%);
+    background: linear-gradient(to bottom, #2c1111 0%, #804d4d 50%, #672828 51%, #ff0000 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#A500FF', endColorstr='#A500FF', GradientType=0);
+}
+.mpbar {
+    background: #00ffff;
+    background: -moz-linear-gradient(top, #11222c 0%, #4d6d80 50%, #285067 51%, #11222c 100%);
+    background: -webkit-linear-gradient(top, #11222c 0%, #4d6d80 50%, #285067 51%, #11222c 100%);
+    background: linear-gradient(to bottom, #11222c 0%, #4d6d80 50%, #285067 51%, #00ffff 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#A500FF', endColorstr='#A500FF', GradientType=0);
+}
+.hpbarbg,
+.mpbarbg,
+#expbarprogress {
+    background: #292521;
+    background: -moz-linear-gradient(top, #292521 0%, #262321 50%, #1f1c18 51%, #151310 100%);
+    background: -webkit-linear-gradient(top, #292521 0%, #262321 50%, #1f1c18 51%, #151310 100%);
+    background: linear-gradient(to bottom, #292521 0%, #000000 51%, #1f1c18 65%, rgba(2, 2, 2, 0.58) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000', endColorstr='#151310', GradientType=0);
+    color: #ffffff;
+}
+#expbarprogress {
+    width: 400px;
+}
+#expbarprogress.progress {
+    height: 30px;
+}
+#expbar {
+    background: #292521;
+    background: -moz-linear-gradient(top, #292521 0%, #262321 50%, #1f1c18 51%, #151310 100%);
+    background: -webkit-linear-gradient(top, #292521 0%, #262321 50%, #1f1c18 51%, #151310 100%);
+    background: linear-gradient(to bottom, #292521 0%, #000000 51%, #1f1c18 65%, rgb(255, 255, 255) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000', endColorstr='#151310', GradientType=0);
+    color: #ffffff;
+}
+#infoPanelContainer {
+    position: fixed;
+    width: 250px;
+    margin-left: -125px;
+    left: 50%;
+    top: 5px;
+}
+#infoPanelContainer #infoPanel {
+    padding: 0 0 10px 0;
+    text-align: center;
+    color: #FFFFFF;
+}
+#infoPanelContainer #infoPanel .targettext {
+    margin: 0 0 5px 0;
+    text-align: left;
+}
+#chatbox {
+    max-width: 600px;
+    overflow: auto;
+    resize: both;
+    width: 350px;
+    height: 500px;
+    max-height: 700px;
+}
+#chatSettingWrapper {
+    padding: 5px 5px 8px 5px;
+}
+#chatSettingWrapper .btn.chatsettingbutton,
+#chatSettingWrapper .btn.chatsettingdisable {
+    padding: 5px;
+}
+
+button.btn.btn-default.btn-xs {
+
+  background-color:#ffffff !important;
+  -webkit-filter: invert(1);
+   filter: invert(1);
+}
+
+#chatSettingWrapper .btn.chatsettingbutton {
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #292521 0%, #262321 50%, #1f1c18 51%, #151310 100%);
+    background: -webkit-linear-gradient(top, #292521 0%, #262321 50%, #1f1c18 51%, #151310 100%);
+    background: linear-gradient(to bottom, #292521 0%, #000000 51%, #1f1c18 65%, rgb(255, 255, 255) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000', endColorstr='#151310', GradientType=0);
+    color: #ffffff;
+}
+#chatSettingWrapper .btn.chatsettingdisable {
+    background: none;
+    color: #666;
+}
+#ladder #laddertable {} #ladder #laddertable tr:first-child {
+    line-height: 3;
+}
+#ladder #laddertable tr {
+    line-height: 2;
+}
+#ladder #laddertable tr img {
+    margin-top: 5px;
+    margin-right: 8px;
+}
+#ladder #laddertable tr:first-child th,
+#ladder #laddertable tr th,
+#ladder #laddertable tr td {
+    padding: 3px 10px;
+}
+/*
+
+#ladder #laddertable tr:nth-child(2) td:nth-child(1):before{
+    content:'1';
+    background-color:#ffcc00;
+}
+
+#ladder #laddertable tr:nth-child(3) td:nth-child(1):before{
+    content:'2';
+    background-color:#c0c0c0;
+}
+
+#ladder #laddertable tr:nth-child(4) td:nth-child(1):before{
+    content:'3';
+    background-color:rgb(0, 166, 255);
+}
+
+#ladder #laddertable tr:nth-child(2) td:nth-child(1):before,
+#ladder #laddertable tr:nth-child(3) td:nth-child(1):before,
+#ladder #laddertable tr:nth-child(4) td:nth-child(1):before{
+    border-radius:100%;
+    text-align:center;
+    padding:3px 6px;
+    font-size:10px;
+    color:#000;
+    margin-right:3px;
+}
+*/
+
+#ladder #laddertable tr td {
+    font-size: 13px;
+}
+#ladder #laddertable tr:nth-child(even) {
+    background: rgba(0, 0, 0, 0.2);
+}
+#laddertable .factionA + .factionA,
+#laddertable .factionB + .factionB {
+    color: #fff
+}
+#laddertable .factionA + .factionA,
+#laddertable .factionA + .factionA + .factionA,
+#laddertable .factionB + .factionB,
+#laddertable .factionB + .factionB + .factionB {
+    font-weight: 300;
+}
+#laddertable .factionA + .factionA + .factionA b,
+#laddertable .factionB + .factionB + .factionB b {
+    font-weight: normal;
+    color: #eee;
+}
+#lowerRightContainer {
+    margin-left: -150px;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    bottom: 95px;
+}
+#chatbox.collapsed {
+    display: none;
+}
+#CollapseChat {
+    float: right;
+}
+#ExpandChat,
+#LadderCollapse {
+    padding: 10px;
+    display: none;
+}
+#ExpandChat {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+#LadderCollapse {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#ClanWhoIsOnline {
+    float: right;
+    margin: 10px 20px;
+    padding: 10px;
+    font-weight: 300;
+}
